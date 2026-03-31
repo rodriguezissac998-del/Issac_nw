@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="bedwars.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A New Era.</title>
+</head>
+<body>
+
+    <h1>New Era of Bedwars Scripts.</h1>
+
+<p class="description">Be better than everyone in Bedwars by using one of the best scripts and becoming the best.</p>
+
+<h2 class="script-title">Scripts.</h2> 
+
+<div id="box-one"></div>
+<h4> Cat Vape.</h4>
+<h3>Cat Vape is currently the best script for roblox bedwars. Works stable and very updated. </h3>
+<a href="https://discord.gg/catvape" class="main-button">Cat Vape Discord Server.</a>
+
+<h4 class="voidware-text">Voidware.</h4>
+<h3>Voidware is another bedwars script but with minimal issues and lag but they also have scripts for other games such as 99 nights in the forest. </h3>
+<a href="https://discord.gg/voidware" class="main-button">Void Ware Discord Server.</a>
+
+    <script>
+        function createSnow() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake'); // This matches your .snowflake CSS
+            
+            // Randomize size
+            const size = Math.random() * 5 + 2 + 'px';
+            snowflake.style.width = size;
+            snowflake.style.height = size;
+            
+            // Randomize position
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            
+            // Randomize timing
+            const duration = Math.random() * 5 + 5 + 's';
+            const delay = Math.random() * 5 + 's';
+            
+            // Link to your CSS @keyframes fall
+            snowflake.style.animation = `fall ${duration} linear ${delay} infinite`;
+            
+            document.body.appendChild(snowflake);
+        }
+
+        // Create 50 flakes
+        for (let i = 0; i < 50; i++) {
+            createSnow();
+        }
+    </script>
+</body>
+</html>

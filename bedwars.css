@@ -1,0 +1,152 @@
+/* 1. Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Style the Body - UPDATED WITH BLUE GRADIENT */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  /* Deep blue at the top (#0a192f) transitioning to black at the bottom */
+  background: linear-gradient(180deg, #0a192f 0%, #000000 100%);
+  background-attachment: fixed; /* Keeps the gradient still while scrolling */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 50px;
+  overflow-x: hidden;
+}
+
+/* 3. Text Elements (Set to Front Layer) */
+h1, .description, .script-title, h4 {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+/* Main Title Box - UPDATED with subtle transparency */
+h1 {
+  background-color: rgba(17, 17, 17, 0.8); /* Semi-transparent black */
+  border: 1px solid #1e3a5f; /* Deep blue border */
+  border-radius: 22px; 
+  padding: 20px 25px;  
+  width: 80%;          
+  max-width: 450px;
+  margin-bottom: 40px; 
+  text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5); /* Adds depth */
+}
+
+.description {
+  max-width: 500px;
+  padding: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* 4. Snowflake Styling (Back Layer) */
+.snowflake {
+  position: fixed;
+  top: -10%;
+  background-color: white;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.6; /* Slightly lower opacity for a cleaner look */
+  filter: blur(1px);
+}
+
+/* 5. The Falling Animation (Kept as is) */
+@keyframes fall {
+  0% { transform: translateY(0) translateX(0); }
+  25% { transform: translateY(25vh) translateX(15px); }
+  50% { transform: translateY(50vh) translateX(-15px); }
+  75% { transform: translateY(75vh) translateX(10px); }
+  100% { transform: translateY(110vh) translateX(0); }
+}
+
+/* "Scripts." title */
+.script-title {
+  color: white;
+  font-size: 2.5rem;
+  margin-top: 30px;
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.6);
+}
+
+/* Brand Name - UPDATED with blue glow */
+/* Brand Name - Moved to the left with a blue glow */
+h4 {
+  font-size: 30px;
+  margin-top: 10px;
+  color: #fff;
+  text-shadow: 0px 0px 15px #00aaff;
+  
+  /* These two lines move it to the left */
+  align-self: flex-start; 
+  margin-left: 10%; /* Adjust this percentage to control how far from the edge it sits */
+  
+  width: auto;
+  text-align: left;
+}
+h3 {
+font-size: 18px;
+  margin-top: 10px;
+  color: #fff;
+  text-shadow: 0px 0px 15px white;
+  
+  /* These two lines move it to the left */
+  align-self: flex-start; 
+  margin-left: 10%; /* Adjust this percentage to control how far from the edge it sits */
+  
+  width: auto;
+  text-align: left;
+}
+
+.main-button {
+  /* Layout */
+  display: inline-block;
+  padding: 12px 30px;
+  margin-top: 20px;
+  
+  /* Colors */
+  background-color: #00aaff; /* Bright blue */
+  color: white;
+  text-decoration: none; /* Removes underline from link */
+  font-weight: bold;
+  font-size: 1rem;
+  
+  /* Borders and Glow */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth hover effect */
+  box-shadow: 0px 0px 15px rgba(0, 170, 255, 0.4);
+  z-index: 10;
+  position: relative;
+}
+
+/* Effect when you hover over the button */
+.main-button:hover {
+  background-color: #0088cc;
+  box-shadow: 0px 0px 25px rgba(0, 170, 255, 0.8);
+  transform: translateY(-2px); /* Makes it pop up slightly */
+}
+
+/* Styling for the Voidware text specifically */
+.voidware-text {
+  color: #c394ff; /* Light purple color */
+  text-shadow: 0px 0px 15px #8a2be2; /* Deep purple glow */
+  
+  /* Keeps it on the left like you wanted */
+  align-self: flex-start;
+  margin-left: 10%;
+  text-align: left;
+  
+  margin-top: 20px; /* Adds some space above it */
+}
+
